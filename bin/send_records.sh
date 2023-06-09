@@ -147,6 +147,6 @@ for ((i = 1;i<=numBatch;i++)); do
       fi
   done
 
-  echo "publish to Kafka ..."
+  echo "publish to Redpanda ..."
   grep -v '^$' ${events_file} | kcat -P -b ${kafkaBrokerHostname}:9092 -t ${kafkaTopicName}
 done
